@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <img id="myImage" src="m1-4.png" width="100" height="180">
+
+    <p>
+    <button type="button" onclick="on()">Light On</button>
+    <button type="button" onclick="off()">Light Off</button>
+    </p>
+
+
+
+
+<div>
+
+    <h1>Display and Remove list using js </h1>
+    
+        <input type="text" id="inputfield" value=""></input>
+        <button type="button" onclick="Display()">Display</button>
+        <button type="button" onclick="Remove()">Remove</button>
+
+   
+    <ul id="list"></ul>
+</div>
+
+<h1>REPLACE SPECIAL CHARACTERS using to string , split and join</h1>
+<p id="demo"></p>
+
+<script>
+    /*no holes will create 
+
+const fruits = [1,'/',2,'/',3,'/',4];
+let text =fruits.toString();
+text = text.replaceAll("/","");
+text = text.replaceAll(","," ");
+
+const myArray = text.split(" ");
+const array = myArray.join('');
+document.write(array);
+document.write( "<br/>" + array.length );
+document.write(" "+ "<br/>"   + array[2]);
+
+*/
+
+/* holes will create using this*/
+
+const myArray = [1,'/',2,'/',3,'/',4];
+
+const array = myArray.join('');
+const newArray = Array ();
+for(i=0 ; i<array.length  ; i++)
+{
+
+    if(array[i] != '/' ){
+
+        for(x=0 ; x <array.length ; x++ )
+        {
+           
+            newArray[x] = array[i];
+            
+            continue;
+        
+        }
+        continue; 
+        document.write(newArray[i]);
+        
+    }
+
+      
+
+}
+
+document.write("<br/>" + newArray.length);
+</script>
+
+
+
+<h3>
+    	Showing Array values, after removing the commas.
+    </h3>
+</body>
+<script>
+let removeComma= () => {
+	let arr = ['alpha', 'bravo', 'charlie'];
+    document.write (arr.join(' '));			// using join() method.
+}
+
+removeComma();
+</script>
+<script src="main.js"></script>
+</body>
+</html>
